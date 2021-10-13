@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  install-notest:
+  spotbugs-report-to-github:
     runs-on: ubuntu-latest
     name: "Package and linting"
     steps:
