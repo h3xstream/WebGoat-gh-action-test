@@ -1,9 +1,6 @@
 name: "Branch build"
-on:
-  push:
-    branches-ignore:
-      - master
-      - develop
+
+on: [push]
 
 jobs:
   spotbugs-report-to-github:
