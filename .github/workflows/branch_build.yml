@@ -8,7 +8,7 @@ on:
 jobs:
   spotbugs-report-to-github:
     runs-on: ubuntu-latest
-    name: "Package and linting"
+    name: "Spotbugs static analysis"
     steps:
       - uses: actions/checkout@v2
       - name: set up JDK
@@ -27,7 +27,7 @@ jobs:
       #Running SpotBugs
       - name: Running 
         run: mvn clean install com.github.spotbugs:spotbugs-maven-plugin:spotbugs -Dspotbugs.sarifOutput=true -Dspotbugs.sarifFullPath=true -DskipTests
-        
+      
       #Merging sarif files
       - name: Installing SARIF multitool
         run: npm i -g @microsoft/sarif-multitool
