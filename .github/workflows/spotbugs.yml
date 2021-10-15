@@ -31,9 +31,16 @@ jobs:
       - name: Installing SARIF multitool
         run: sarif-multitool merge --recurse --merge-runs --force spotbugsSarif.json
 
+      - name: List spotbugsSarif.json
+        run: ls -Rshl */*/spotbugsSarif.json
+      
       #
       - name: Debug
         run: ls -ls && ls -ls merged.sarif
+
+      #
+      - name: Merge SARIF file
+        run: cat merged.sarif
 
       #Uploading sarif report
       - name: Upload report
