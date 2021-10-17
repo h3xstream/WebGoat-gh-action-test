@@ -23,7 +23,7 @@ jobs:
       
       #Running SpotBugs
       - name: Running 
-        run: mvn clean install com.github.spotbugs:spotbugs-maven-plugin:spotbugs -Dspotbugs.sarifOutput=true -Dspotbugs.sarifFullPath=true -DskipTests
+        run: mvn install com.github.spotbugs:spotbugs-maven-plugin:spotbugs -Dspotbugs.sarifOutput=true -Dspotbugs.sarifFullPath=true -DskipTests
       
       #Merging sarif files
       - name: Installing SARIF multitool
